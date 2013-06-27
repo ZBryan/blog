@@ -111,6 +111,8 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
+    rvm-capistrano (1.3.2)
+      capistrano (>= 2.0.0)
     sass (3.2.9)
     sass-rails (4.0.0.rc2)
       railties (>= 4.0.0.beta, < 5.0)
@@ -159,6 +161,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.0.0.rc2)
   rspec-rails
+  rvm-capistrano
   sass-rails (~> 4.0.0.rc2)
   sdoc
   sqlite3

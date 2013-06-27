@@ -1,9 +1,11 @@
 require 'bundler/capistrano'
-# $: .unshift(File.expand_path('./lib', ENV['rvm_path']))
+require "rvm/capistrano"
+
 set :rvm_type, :user
-# require "rvm/capistrano"
-set :application, "Blog"
-set :repository,  "git@github.com:ZBryan/blog.git"
+#$: .unshift(File.expand_path('./lib', ENV['rvm_path']))
+
+set :application, "blog"
+set :repository,  "https://github.com/ZBryan/blog.git"
 
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -13,9 +15,9 @@ role :app, "localhost"                          # This may be the same as your `
 role :db,  "localhost", :primary => true # This is where Rails migrations will run
 set :port, 2222
 set :user, "vagrant"
-set :deploy_to, "/Users/zarchary2/mystuff/RailsClass/app/blog"
+set :deploy_to, "/home/vagrant/sites/recipes"
 set :keep_releases, 5
-# set :use_sudo, false
+set :use_sudo, false
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
